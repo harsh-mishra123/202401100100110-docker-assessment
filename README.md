@@ -37,7 +37,7 @@ Full reports: [`reports/trivy-before.txt`](reports/trivy-before.txt), [`reports/
 ## Stage 4: Version and publish
 
 - Built with `--build-arg APP_VERSION=1.0.0` and tagged `harrsshhh/fest-backend:1.0.0` and `harrsshhh/fest-backend:1.0` (never `latest`), both pushed to the public repo https://hub.docker.com/r/harrsshhh/fest-backend.
-- **Digest of 1.0.0:** `sha256:859c79bdb56da6ce5fdd2ee2b8302afd60593daa59313b174a7956032a752ab0` (same digest for `1.0`).
+- **Digest of 1.0.0:** `sha256:859c79bdb56da6ce5fdd2ee2b8302afd60593daa59313b174a7956032a752ab0` (same digest for `1.0`). This is the digest of the pushed manifest list; the Docker Hub Tags page shows `4151e5928e56`, the linux/amd64 image inside it.
 - `compose.yaml` now uses `image: harrsshhh/fest-backend:1.0.0` instead of `build`. After deleting the local backend images, `docker compose up -d` pulled it from Docker Hub and the page shows `backend 1.0.0` with the saved registrations.
 
 ## Stage 5: Sign and verify with cosign
@@ -51,3 +51,7 @@ Full reports: [`reports/trivy-before.txt`](reports/trivy-before.txt), [`reports/
 ## Steps not completed
 
 - None.
+
+## Screenshots
+
+All evidence is in [`screenshots/`](screenshots/): S1-2, S1-3, S2-2, S2-3, S2-4, S3-1, S3-3, S4-1, S4-2, S4-3, S5-1, S5-2, S5-3, S5-4.
